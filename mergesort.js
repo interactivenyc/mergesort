@@ -1,24 +1,9 @@
-//split function; splits into two
-// if length is > 1
-
 function split(arr) {
-  console.log('split', arr);
   const halfway = Math.floor(arr.length / 2);
-  // let tempArr = [arr.slice(0, halfway), arr.slice(halfway)];
-  // let returnArr = tempArr.map(elem => {
-  //   if (elem.length > 1) {
-  //     return split(elem);
-  //   } else {
-  //     return elem;
-  //   }
-  // })
-  // console.log('returnArr', returnArr);
-
-  // return returnArr;
   return [arr.slice(0, halfway), arr.slice(halfway)];
 }
 
-function merge(arrOne, arrTwo) {
+function merge(arrOne, arrTwo) {  
   let mergedArr = [];
   while (arrOne.length > 0 && arrTwo.length > 0) {
     if (arrOne[0] < arrTwo[0]) {
@@ -28,12 +13,10 @@ function merge(arrOne, arrTwo) {
     }
   }
   mergedArr.push(...arrOne, ...arrTwo);
-
-  console.log(mergedArr);
   return mergedArr;
 }
 
-function mergeSort(arr) {
+function mergeSort(arr) {  
   if (arr.length < 2) {
     return arr;
   }
